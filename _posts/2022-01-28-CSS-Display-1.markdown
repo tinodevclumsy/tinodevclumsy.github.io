@@ -1,29 +1,32 @@
 ---
 layout: posts
-title:  "[CSS] Display 정리"
-date:   2022-01-28 23:44:17 -0700
-categories: css
+title: "[CSS] Display 정리"
+date: 2022-01-28 23:44:17 -0700
+categories: 
+      - css
+# tags: [css]
+
+author_profile: true
+sidebar:
+  nav: "docs"
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+### Display: Block
 
-`YEAR-MONTH-DAY-title.MARKUP`
+1. 새로운 한줄씩마다 배치
+2. 최대 너비
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+``` css
+.display-block {
+  position: relative;
+  display: block;
+  background: black;
+  height: 300px;
+}
+```
 
-Jekyll also offers powerful support for code snippets:
+<div class="display-block;" style="position: relative; display: block; background:black; height: 300px;">
+  <span style="color: #fff; position: absolute; top: 50%; left: 0; width: 100%; text-align: center; transform: translateY(-50%);">Display: Block</span>
+</div>
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+### Display: Inline-Block
