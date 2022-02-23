@@ -1,8 +1,11 @@
 # main links
 main:
   - title: "About"
+    url: /about
   - title: "Posts"
+    url: /archive
   - title: "Contact"
+    url: /contact
 docs:
   - title: "LANGUAGE"
     children:
