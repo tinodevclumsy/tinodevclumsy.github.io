@@ -4,11 +4,31 @@ main:
   - title: "Posts"
   - title: "Contact"
 docs:
-  - title: "HTML/CSS"
+  - title: "LANGUAGE"
     children:
       - title: "HTML"
-        url: html/
+        url: html
         category: "html"
       - title: "CSS"
-        url: css/
+        url: css
         category: "css"
+      - title: "JAVASCRIPT"
+        url: javascript
+        category: "javasript"
+      
+  - title: "FRAMEWORK"
+    children:
+      - title: "VUE JS"
+        url: vue
+        category: "vue"
+      - title: "REACT JS"
+        url: react
+        category: "react"
+  - title: "ETC"
+    children:
+      - title: "GIT"
+        url: git
+        category: "git"
+      - title: "PERSONAL"
+        url: personal
+        category: "personal"
