@@ -5,8 +5,8 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Seo = ({ description, title, children }) => {
   const { site } = useStaticQuery(
@@ -23,10 +23,10 @@ const Seo = ({ description, title, children }) => {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata?.title;
 
   return (
     <>
@@ -40,11 +40,12 @@ const Seo = ({ description, title, children }) => {
         name="twitter:creator"
         content={site.siteMetadata?.social?.twitter || ``}
       /> */}
+      <link rel="icon" type="image/png" href="./favicon.ico" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
     </>
-  )
-}
+  );
+};
 
-export default Seo
+export default Seo;
