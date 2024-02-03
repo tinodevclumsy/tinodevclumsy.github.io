@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Bio />
-      {/* <ol style={{ listStyle: `none` }}>
+      <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
@@ -56,7 +56,7 @@ const BlogIndex = ({ data, location }) => {
             </li>
           )
         })}
-      </ol> */}
+      </ol>
     </Layout>
   )
 }
@@ -77,7 +77,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { status: { eq: "public" } } }
+    ) {
       nodes {
         excerpt
         fields {
