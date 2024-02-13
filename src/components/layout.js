@@ -4,10 +4,11 @@ import styled from "styled-components";
 
 const FooterNav = styled.div`
   display: flex;
+  margin-bottom: 15px;
 `;
 
 const FooterNavItem = styled.a`
-  margin: 0 10px;
+  margin-right: 10px;
 `;
 
 const Layout = ({ location, title, children }) => {
@@ -34,9 +35,32 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        <FooterNav>
+          <FooterNavItem href="/portofolio" target="_blank" rel="noreferrer">
+            About
+          </FooterNavItem>
+
+          <FooterNavItem
+            href="www.linkedin.com/in/seungjun-martin-lee-tinodevclumsy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </FooterNavItem>
+
+          <FooterNavItem
+            href="https://github.com/tinodevclumsy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </FooterNavItem>
+        </FooterNav>
+        © {new Date().getFullYear()} SEUNGJUN LEE, Built with
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a href="https://www.gatsbyjs.com" target="_blank" rel="noreferrer">
+          Gatsby
+        </a>
       </footer>
     </div>
   );
