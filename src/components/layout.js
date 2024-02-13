@@ -36,14 +36,13 @@ const Layout = ({ location, title, children }) => {
       <main>{children}</main>
       <footer>
         <FooterNav>
-          <FooterNavItem href="/portofolio" target="_blank" rel="noreferrer">
+          <FooterNavItem href="/portofolio" target="_blank">
             About
           </FooterNavItem>
 
           <FooterNavItem
             href="www.linkedin.com/in/seungjun-martin-lee-tinodevclumsy"
             target="_blank"
-            rel="noreferrer"
           >
             LinkedIn
           </FooterNavItem>
@@ -51,14 +50,13 @@ const Layout = ({ location, title, children }) => {
           <FooterNavItem
             href="https://github.com/tinodevclumsy"
             target="_blank"
-            rel="noreferrer"
           >
             GitHub
           </FooterNavItem>
         </FooterNav>
         © {new Date().getFullYear()} SEUNGJUN LEE, Built with
         {` `}
-        <a href="https://www.gatsbyjs.com" target="_blank" rel="noreferrer">
+        <a href="https://www.gatsbyjs.com" target="_blank">
           Gatsby
         </a>
       </footer>
