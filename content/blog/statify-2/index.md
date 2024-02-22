@@ -3,7 +3,6 @@ title: Creating a React Web App using the Spotify API - Obtaining Token (2)
 date: "2024-02-13T22:12:03.284Z"
 description: ""
 status: "public"
-slug: "test"
 ---
 
 [Check out the first post](https://velog.io/@tinodev/Spotify-API-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%9B%B9%EC%95%B1-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0-%ED%86%A0%ED%81%B0-%EB%B0%9C%EA%B8%89-1)

@@ -36,12 +36,12 @@ const Layout = ({ location, title, children }) => {
       <main>{children}</main>
       <footer>
         <FooterNav>
-          <FooterNavItem href="/portofolio" target="_blank">
+          <FooterNavItem href="/portfolio" target="_blank">
             About
           </FooterNavItem>
 
           <FooterNavItem
-            href="www.linkedin.com/in/seungjun-martin-lee-tinodevclumsy"
+            href="https://www.linkedin.com/in/seungjun-martin-lee-tinodevclumsy"
             target="_blank"
           >
             LinkedIn
