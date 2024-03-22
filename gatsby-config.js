@@ -16,14 +16,53 @@ module.exports = {
     },
     description: `SEUNGJUN LEE's website`,
     siteUrl: `https://tinodevclumsy.github.io/`,
-    // social: {
-    //   twitter: `kylemathews`,
-    // },
   },
   plugins: [
     `gatsby-plugin-image`,
-    "gatsby-plugin-sitemap",
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        output: "/",
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage(
+            filter: {
+              path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+            }
+          ) {
+            nodes {
+              path
+            }
+          }
+        }
+        `,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map((page) => {
+            return { ...page };
+          });
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: "weekly",
+            priority: 0.7,
+          };
+        },
+      },
+    },
     "gatsby-plugin-robots-txt",
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://tinodevclumsy.github.io/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
