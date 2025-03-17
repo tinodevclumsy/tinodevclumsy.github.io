@@ -1,10 +1,40 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import "../styles/global.css"
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
 <Layout>
-	<h1>COMING SOON</h1>
+  <main class="h-full pt-8 pb-8">
+    <section>
+		<div class="container">
+			<ul>
+				{
+				  posts.map((post) => (
+					 <li>
+						<a href={`/blog/${post.id}/`}>
+						  {post.data.heroImage && (
+							 <img
+								width={720}
+								height={360}
+								src={post.data.heroImage}
+								alt=""
+							 />
+						  )}
+						  <h4 class="title">{post.data.title}</h4>
+						  <p class="date">
+							 <FormattedDate date={post.data.pubDate} />
+						  </p>
+						</a>
+					 </li>
+				  ))
+				}
+			 </ul>
+		</div>
+    </section>
+  </main>
 </Layout>
