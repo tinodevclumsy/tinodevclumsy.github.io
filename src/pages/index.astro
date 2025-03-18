@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import ArrowRight from "../components/common/ArrowRight.astro";
+import { slugify } from "../utils/slugify";
+
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
@@ -17,7 +19,7 @@ const posts = (await getCollection("blog")).sort(
             posts.map((post) => (
               <li>
                 <a
-                  href={`/blog/${post.id}/`}
+                  href={`/blog/${slugify(post.data.title)}/`}
                   class="border-b-2 flex justify-between items-center border-blue-900 py-5 group"
                 >
                   {/* {post.data.image && (
