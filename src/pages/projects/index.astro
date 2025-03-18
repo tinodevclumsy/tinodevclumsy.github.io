@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ArrowRight from "../../components/common/ArrowRight.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("project");
+---
+
+<Layout>
+  <main class="pt-8 pb-8">
+    <section>
+      <div class="container">
+        <h1>Projects</h1>
+
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-3">
+          {
+            projects.map((project, index) => {
+              const hasLiveLink =
+                project.data.live && project.data.live.length > 0;
+
+              const projectContent = (
+                <>
+                  <div class="absolute w-full top-3 px-5 flex justify-between items-center z-10">
+                    <h6 class="font-medium transform text-sm text-stone-400 ">
+                      {index + 1}.
+                    </h6>
+                    <div class="group-hover:-rotate-45 transition-transform duration-300">
+                      <ArrowRight />
+                    </div>
+                  </div>
+                  <div
+                    class="absolute top-0 left-1/2  w-full h-full bg-center bg-no-repeat bg-cover transform -translate-x-1/2"
+                    style={{ backgroundImage: `url(${project.data.image})` }}
+                  />
+                  <div class="absolute top-0 left-0 w-full h-full bg-black/60" />
+                  <h6 class="font-medium absolute bottom-3 left-5 transform text-xl text-stone-200">
+                    {project.data.title}
+                  </h6>
+                </>
+              );
+
+              return hasLiveLink ? (
+                <a
+                  href={project.data.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-card aspect-video relative group rounded-md overflow-hidden drop-shadow-md bg-slate-900"
+                >
+                  {projectContent}
+                </a>
+              ) : (
+                <div class="project-card aspect-video relative group rounded-md overflow-hidden drop-shadow-md bg-slate-900">
+                  {projectContent}
+                </div>
+              );
+            })
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

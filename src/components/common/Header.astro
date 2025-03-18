@@ -1,0 +1,25 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header class="container">
+	<nav class="flex justify-between items-center">
+		<h2><a href="/">SEUNGJUN LEE.</a></h2>
+		<div class="internal-links">
+			<HeaderLink href="/">All Posts</HeaderLink>
+			<HeaderLink href="/projects">Projects</HeaderLink>
+		</div>
+	</nav>
+</header>
+<style>
+	nav a {
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		text-decoration: none;
+		border-bottom-color: var(--accent);
+	}
+</style>
