@@ -113,6 +113,15 @@
   margin-bottom: 0.5rem;
 }
 
+.blog-post-content li::before {
+  content: "•";
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  color: var(--foreground);
+  font-size: 1.2rem;
+}
+
 .blog-post-content blockquote {
   border-left: 4px solid #3b82f6;
   padding-left: 1rem;

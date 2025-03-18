@@ -49,20 +49,7 @@ h6 {
   line-height: 1.2;
 }
 
-p,
-ul,
-ol,
-dl,
-table {
-  margin-bottom: 1rem;
-}
-
 /* 목록 스타일 */
-ul,
-ol {
-  padding-left: 2rem;
-}
-
 img,
 video,
 canvas,
