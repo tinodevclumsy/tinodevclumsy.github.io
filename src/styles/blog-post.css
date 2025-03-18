@@ -110,6 +110,7 @@
 }
 
 .blog-post-content li {
+  position: relative;
   margin-bottom: 0.5rem;
 }
 
