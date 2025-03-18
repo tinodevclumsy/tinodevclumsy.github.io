@@ -11,7 +11,7 @@ const blog = defineCollection({
 		// Transform string to Date object
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
-		heroImage: z.string().optional(),
+		image: z.string().optional(),
 	}),
 });
 
@@ -22,7 +22,7 @@ const project = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
-      technologies: z.array(z.string()),t
+      technologies: z.array(z.string()),
 		image: z.string().optional(),
       github: z.string().optional(),
       live: z.string().optional(),

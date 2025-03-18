@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
 html,
 body {
   margin: 0;
@@ -15,17 +27,15 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
-  background-color: #fff;
+  /* color: #333;
+  background-color: #fff; */
+  color: var(--foreground);
+  background: var(--background);
 }
 
 a {
-  color: #0066cc;
+  /* color: #0066cc; */
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 h1,
@@ -39,39 +49,7 @@ h6 {
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.75rem;
-}
-h4 {
-  font-size: 1.5rem;
-}
-h5 {
-  font-size: 1.25rem;
-}
-h6 {
-  font-size: 1rem;
-}
-
-p,
-ul,
-ol,
-dl,
-table {
-  margin-bottom: 1rem;
-}
-
 /* 목록 스타일 */
-ul,
-ol {
-  padding-left: 2rem;
-}
-
 img,
 video,
 canvas,

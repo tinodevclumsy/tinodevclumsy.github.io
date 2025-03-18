@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import ArrowRight from "../../components/common/ArrowRight.astro";
 import { getCollection } from "astro:content";
 
 const projects = await getCollection("project");
@@ -23,8 +24,8 @@ const projects = await getCollection("project");
                     <h6 class="font-medium transform text-sm text-stone-400 ">
                       {index + 1}.
                     </h6>
-                    <div class="border rounded-full  border-zinc-500 p-2 group-hover:-rotate-45 transition-transform duration-300">
-                      >
+                    <div class="group-hover:-rotate-45 transition-transform duration-300">
+                      <ArrowRight />
                     </div>
                   </div>
                   <div
