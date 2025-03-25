@@ -24,9 +24,11 @@ const projects = await getCollection("project");
                     <h6 class="font-medium transform text-sm text-stone-400 ">
                       {index + 1}.
                     </h6>
-                    <div class="group-hover:-rotate-45 transition-transform duration-300">
-                      <ArrowRight />
-                    </div>
+                    {hasLiveLink && (
+                      <div class="group-hover:-rotate-45 transition-transform duration-300">
+                        <ArrowRight />
+                      </div>
+                    )}
                   </div>
                   <div
                     class="absolute top-0 left-1/2  w-full h-full bg-center bg-no-repeat bg-cover transform -translate-x-1/2"
