@@ -2,7 +2,7 @@
 title: JavaScript's Asynchronous Processing and Event Loop
 description: ""
 pubDate: 2025-03-04T02:43:56.929Z
-image: ""
+image: "/images/blog/js.png"
 ---
 
 This article contains information I've organized during my studies. It may not cover everything and there might be some incomplete parts, so please use it as a reference. Feedback is welcome! 🙌
