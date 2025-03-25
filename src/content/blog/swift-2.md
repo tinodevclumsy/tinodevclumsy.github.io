@@ -2,7 +2,7 @@
 title: Handling Unexpected nil Issues in SwiftUI .sheet and Solutions
 description: ""
 pubDate: 2025-03-01T02:29:35.236Z
-image: ""
+image: "/images/blog/swift.png"
 ---
 
 ## The Problem
