@@ -3,6 +3,7 @@ title: ES6 Features
 description: ""
 pubDate: 2025-03-12T21:05:59.668Z
 image: "/images/blog/js.png"
+categories: ["Javascript"]
 ---
 
 ES6 is an important update to JavaScript that introduced various features to improve development productivity and make code more concise and readable.

@@ -3,6 +3,7 @@ title: Creating a React Web App using the Spotify API - Obtaining Token (1)
 description: 'How about trying to create a simple web app using the Spotify API as a toy project?'
 pubDate: 'Jan 01 2024'
 image: "/images/blog/react.png"
+categories: ["React", "Project"]
 ---
 
 How about trying to create a simple web app using the Spotify API as a toy project? (For now, it's free)

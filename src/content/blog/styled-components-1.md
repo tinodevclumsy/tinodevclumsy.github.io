@@ -3,6 +3,7 @@ title: Setting up Themes in styled-components
 description: ""
 pubDate: 2025-03-05T02:47:15.793Z
 image: ""
+categories: ["styled-components"]
 ---
 
 **styled-components** is a CSS-in-JS library that I personally prefer when starting with React. The ThemeProvider component in styled-components provides themes globally. In this article, we'll look at how to set up themes as the title suggests.

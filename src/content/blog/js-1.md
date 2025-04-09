@@ -3,6 +3,7 @@ title: JavaScript Array Methods Summary
 description: ""
 pubDate: 2025-03-02T02:33:52.440Z
 image: "/images/blog/js.png"
+categories: ["Javascript"]
 ---
 
 ### 1\. `push()`

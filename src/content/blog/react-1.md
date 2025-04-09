@@ -3,6 +3,7 @@ title: Goodbye CRA.. Creating New Projects After React 19
 description: ""
 pubDate: 2025-02-28T23:07:50.634Z
 image: "/images/blog/react.png"
+categories: ["React"]
 ---
 
 ## Limitations of Create React App (CRA)

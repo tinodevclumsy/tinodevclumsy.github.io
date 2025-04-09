@@ -3,6 +3,7 @@ title: Implementing Placeholder in SwiftUI TextEditor
 description: ""
 pubDate: 2025-03-13T21:09:40.463Z
 image: "/images/blog/swift.png"
+categories: ["Swift"]
 ---
 
 Unlike TextField, TextEditor does not natively provide a placeholder feature. We'll explore how to add a placeholder to TextEditor using ZStack.

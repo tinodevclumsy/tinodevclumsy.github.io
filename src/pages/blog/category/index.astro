@@ -1,0 +1,31 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+
+// 카테고리별로 그룹화
+const categories = [...new Set(posts.flatMap((post) => post.data.categories))];
+---
+
+<Layout>
+  <main class="min-h-full pt-8 pb-8">
+    <section>
+      <div class="container">
+        <h1>Categories</h1>
+
+        <ul>
+          {
+            categories.map((category) => (
+              <li>
+                <a href={`/blog/category/${category.toLowerCase()}`} class="category border-b-2 flex justify-between items-center border-blue-900 py-3 group">
+                  {category}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </main>
+</Layout>
