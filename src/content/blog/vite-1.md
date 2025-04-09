@@ -3,6 +3,7 @@ title: Resolving Vite Dependency Optimization Errors
 description: ""
 pubDate: 2025-03-06T21:04:23.819Z
 image: ""
+categories: ["Vite"]
 ---
 
 ## Problem

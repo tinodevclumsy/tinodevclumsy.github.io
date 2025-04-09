@@ -3,6 +3,7 @@ title: Solving ForEach ID Duplication Problems in SwiftUI
 description: ""
 pubDate: 2025-03-01T02:21:18.561Z
 image: "/images/blog/swift.png"
+categories: ["Swift", "Project"]
 ---
 
 ## The Problem

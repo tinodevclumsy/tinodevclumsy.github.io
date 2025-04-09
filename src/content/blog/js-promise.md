@@ -3,6 +3,7 @@ title: JavaScript Promise - Asynchronous Processing and Concept Overview
 description: 'I successfully implemented login with OAuth and issued tokens.'
 pubDate: 'Feb 26 2025'
 image: "/images/blog/js.png"
+categories: ["Javascript"]
 ---
 
 # JavaScript Promise: Asynchronous Processing and Concept Overview

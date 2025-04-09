@@ -3,6 +3,7 @@ title: Creating a React web app using the Spotify API - Token Renewal (3)
 description: 'I successfully implemented login with OAuth and issued tokens.'
 pubDate: 'Feb 21 2024'
 image: "/images/blog/react.png"
+categories: ["React", "Project"]
 ---
 
 <!-- ![TINO-Seungjun Lee - api response](./image.png) -->
