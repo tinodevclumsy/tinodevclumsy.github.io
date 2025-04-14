@@ -3,6 +3,7 @@ title: From Promise to async/await
 description: ""
 pubDate: 2025-03-03T02:36:46.631Z
 image: "/images/blog/js.png"
+categories: ["Javascript"]
 ---
 
 ## Limitations of Promises

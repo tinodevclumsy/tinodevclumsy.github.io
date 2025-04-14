@@ -1,0 +1,60 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { slugify } from "../../../utils/slugify";
+import FormattedDate from "../../../components/FormattedDate.astro";
+import ArrowRight from "../../../components/common/ArrowRight.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  const categories = [
+    ...new Set(posts.flatMap((post) => post.data.categories || [])),
+  ];
+
+  return categories.map((category) => {
+    return {
+      params: { category: category.toLowerCase() },
+      props: {
+        posts: posts.filter((post) => post.data.categories.includes(category)),
+      },
+    };
+  });
+}
+
+const { posts } = Astro.props;
+const { category } = Astro.params;
+---
+
+<Layout>
+  <main class="min-h-full pt-8 pb-8">
+    <section>
+      <div class="container">
+        <h1>Categories - {category}</h1>
+
+        <ul>
+          {
+            posts.map((post) => (
+              <li>
+                <a
+                  href={`/blog/${slugify(post.data.title)}/`}
+                  class="border-b-2 flex justify-between items-center border-blue-900 py-5 group"
+                >
+                  <div>
+                    <h2 class="text-xl font-medium">{post.data.title}</h2>
+                    <p class="mt-3 text-xs text-stone-400">
+                      <FormattedDate date={post.data.pubDate} />
+                    </p>
+                  </div>
+                  <div class="group-hover:-rotate-45 transition-transform duration-300">
+                    <ArrowRight />
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </main>
+</Layout>

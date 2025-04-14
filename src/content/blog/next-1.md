@@ -3,6 +3,7 @@ title:  Next.js + Contentful CMS Implementation Journey
 description: ""
 pubDate: 2025-03-02T02:25:43.245Z
 image: "/images/blog/next_contentful.png"
+categories: ["Next.js"]
 ---
 
 ## Why I Chose Contentful CMS
