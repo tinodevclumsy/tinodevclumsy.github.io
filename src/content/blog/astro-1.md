@@ -3,6 +3,7 @@ title: Creating a Markdown Generator Utility for Astro SSG Blog
 description: ""
 pubDate: 2025-03-29T18:47:59.452Z
 image: ""
+categories: ["Astro", "Project"]
 ---
 
 I recently built a blog using Astro SSG (Static Site Generator). Since it's a static site, I manage content with markdown files, but creating files and writing frontmatter every time became tiresome. To solve this problem, I developed a simple utility function.
