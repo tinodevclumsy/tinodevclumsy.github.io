@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import ArrowRight from "../../../components/common/ArrowRight.astro";
 
 const posts = await getCollection("blog");
 
@@ -17,9 +18,15 @@ const categories = [...new Set(posts.flatMap((post) => post.data.categories))];
         <ul>
           {
             categories.map((category) => (
-              <li>
-                <a href={`/blog/category/${category.toLowerCase()}`} class="category border-b-2 flex justify-between items-center border-blue-900 py-3 group">
+              <li class="group">
+                <a
+                  href={`/blog/category/${category.toLowerCase()}`}
+                  class="category border-b-2 flex justify-between items-center border-blue-900 py-3 group"
+                >
                   {category}
+                  <div class="group-hover:-rotate-45 transition-transform duration-300">
+                    <ArrowRight size="12" dimension="24" />
+                  </div>
                 </a>
               </li>
             ))
