@@ -1,7 +1,11 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
+
+const { size = 24, dimension = 48 } = Astro.props;
 ---
 
-<div class="w-12 h-12 flex justify-center items-center border rounded-full border-zinc-500">
-   <Icon name="mdi:chevron-right" size={24} />
- </div>
+<div
+  class=`w-[${dimension}px] h-[${dimension}px] flex justify-center items-center border rounded-full border-zinc-500`
+>
+  <Icon name="mdi:chevron-right" size={size} />
+</div>
