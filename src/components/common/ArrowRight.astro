@@ -1,11 +1,30 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { size = 24, dimension = 48 } = Astro.props;
+type Size = 'sm' | 'md' | 'lg' | 'xl';
+
+interface Props {
+  size?: Size;
+}
+
+const { size = 'md' }: Props = Astro.props;
+
+const sizeClasses: Record<Size, string> = {
+  sm: 'w-8 h-8',
+  md: 'w-12 h-12',
+  lg: 'w-16 h-16',
+  xl: 'w-20 h-20'
+};
+
+const iconSizes: Record<Size, number> = {
+  sm: 16,
+  md: 24,
+  lg: 32,
+  xl: 40
+};
 ---
 
-<div
-  class=`w-[${dimension}px] h-[${dimension}px] flex justify-center items-center border rounded-full border-zinc-500`
->
-  <Icon name="mdi:chevron-right" size={size} />
+
+<div class={`${sizeClasses[size]} flex justify-center items-center border rounded-full border-zinc-500`}>
+  <Icon name="mdi:chevron-right" size={iconSizes[size]} />
 </div>
