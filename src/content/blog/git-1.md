@@ -6,8 +6,6 @@ image: ""
 categories: ["Git"]
 ---
 
-# Git | How to Move Commits to a New Branch When Committed to Wrong Branch
-
 Sometimes you make the mistake of committing to the wrong branch while working. Here's how to resolve the situation when you should have created a new branch from `develop` but accidentally committed to `branch-a`.
 
 ## Example Situation

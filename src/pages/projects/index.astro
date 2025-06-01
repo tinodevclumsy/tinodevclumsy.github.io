@@ -10,9 +10,9 @@ const projects = await getCollection("project");
   <main class="pt-8 pb-8">
     <section>
       <div class="container">
-        <h1>Projects</h1>
+        <h1 class="page-title">Projects</h1>
 
-        <div class="grid md:grid-cols-2 grid-cols-1 gap-3">
+        <div class="grid md:grid-cols-2 grid-cols-1 py-3 gap-3">
           {
             projects.map((project, index) => {
               const hasLiveLink =
