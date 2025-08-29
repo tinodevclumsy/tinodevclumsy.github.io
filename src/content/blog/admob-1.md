@@ -2,7 +2,7 @@
 title: AdMob "No ad to show" Error Solution - Fixing Ad Display Issues with IDFA Test Device Registration
 description: ""
 pubDate: 2025-07-30T19:58:28.428Z
-image: ""
+image: "/images/blog/swift_admob.png"
 categories: ["Project"]
 ---
 
