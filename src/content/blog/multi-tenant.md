@@ -6,8 +6,6 @@ image: ""
 categories: ["System Design"]
 ---
 
-# Multi-Tenant Architecture Exploration
-
 While maintaining an LMS (Learning Management System), I discovered an interesting structure. Multiple schools and educational institutions were sharing the same frontend codebase on the same server. Each institution runs its own independent educational environment, but they're actually using one shared system. This led me to learn about "multi-tenant architecture."
 
 ## What is Multi-Tenant Architecture?
